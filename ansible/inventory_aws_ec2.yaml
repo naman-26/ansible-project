@@ -1,0 +1,13 @@
+---
+plugin: aws_ec2
+regions:
+  - ap-south-1
+
+# Creating host groups 
+keyed_groups:
+  # According to tag
+  - key: tags
+    prefix: tag
+  # Accoring to instance_type
+  - key: instance_type
+    prefix: instance_type
